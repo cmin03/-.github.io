@@ -1,0 +1,268 @@
+.greeting-card {
+  background: radial-gradient(circle at top left, #ffe6e6, #ffb3c6 60%, #ff85a2 90%);
+  border-radius: 25px;
+  padding: 40px 35px;
+  max-width: 520px;
+  margin: 30px auto;
+  box-shadow:
+    0 8px 15px rgba(255, 105, 180, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.6);
+  color: #6a003f;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-align: center;
+  position: relative;
+  user-select: text;
+  cursor: default;
+
+  animation: fadeInUp 1s ease forwards;
+  transition: transform 0.3s ease;
+}
+.greeting-card:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 12px 30px rgba(255, 20, 147, 0.5),
+    inset 0 0 30px rgba(255, 182, 193, 0.8);
+}
+
+/* 제목 */
+.greeting-card h2 {
+  font-size: 2.6rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+  color: #d6336c;
+  text-shadow: 1px 1px 6px rgba(255, 105, 180, 0.7);
+  position: relative;
+}
+
+/* 제목 밑 반짝임 효과 */
+.greeting-card h2::after {
+  content: '';
+  position: absolute;
+  left: 10%;
+  bottom: -8px;
+  width: 80%;
+  height: 6px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, transparent, #ff4f87, #ff85a2, transparent);
+  animation: shine 2.5s linear infinite;
+}
+
+/* 본문 */
+.greeting-card p {
+  margin-top: 0;
+  white-space: pre-line;
+  color: #7a003f;
+  text-shadow: 0 0 5px #ffd6e8;
+  font-weight: 600;
+}
+
+/* 애니메이션: 페이드 인 + 살짝 위에서 내려오기 */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 제목 밑 라인 반짝임 애니메이션 */
+@keyframes shine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+
+
+
+
+.hobby-bottom-left {
+  background-image: url('images/3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hobby-top-left {
+  background-image: url('images/1.jpg'); /* images 폴더 안에 있다면 */
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+.hobby-top-right {
+  background-image: url('images/4.jpg'); /* images 폴더 안에 있다면 */
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+
+.hobby-bottom-right {
+  background-image: url('images/2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+
+/* 공통 스타일 */
+.hobby-box, .hobby-top-left {
+  position: relative; /* 자식 위치 기준 */
+  color: #ffea00;     /* 밝은 노란색 */
+  font-weight: 900;   /* 굵은 글씨 */
+  font-size: 28px;
+  text-shadow:
+    -2px -2px 4px black,
+    2px -2px 4px black,
+    -2px 2px 4px black,
+    2px 2px 4px black; /* 검은 그림자로 가독성 UP */
+  padding: 10px;
+}
+
+/* 텍스트를 왼쪽 상단에 고정 */
+.hobby-box::before,
+.hobby-top-left::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  pointer-events: none; /* 클릭 방해 안함 */
+}
+
+/* 공통 스타일 */
+.hobby-box, .hobby-top-right {
+  position: relative; /* 자식 위치 기준 */
+  color: #ffea00;     /* 밝은 노란색 */
+  font-weight: 900;   /* 굵은 글씨 */
+  font-size: 28px;
+  text-shadow:
+    -2px -2px 4px black,
+    2px -2px 4px black,
+    -2px 2px 4px black,
+    2px 2px 4px black; /* 검은 그림자로 가독성 UP */
+  padding: 10px;
+}
+
+/* 텍스트를 왼쪽 상단에 고정 */
+.hobby-box::before,
+.hobby-top-right::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  pointer-events: none; /* 클릭 방해 안함 */
+}
+
+.hobby-box, .hobby-bottom-right {
+  position: relative; /* 자식 위치 기준 */
+  color: #ffea00;     /* 밝은 노란색 */
+  font-weight: 900;   /* 굵은 글씨 */
+  font-size: 28px;
+  text-shadow:
+    -2px -2px 4px black,
+    2px -2px 4px black,
+    -2px 2px 4px black,
+    2px 2px 4px black; /* 검은 그림자로 가독성 UP */
+  padding: 10px;
+}
+
+/* 텍스트를 왼쪽 상단에 고정 */
+.hobby-box::before,
+.hobby-bottom-right::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  pointer-events: none; /* 클릭 방해 안함 */
+}
+
+.hobby-box, .hobby-bottom-left {
+  position: relative; /* 자식 위치 기준 */
+  color: #ffea00;     /* 밝은 노란색 */
+  font-weight: 900;   /* 굵은 글씨 */
+  font-size: 28px;
+  text-shadow:
+    -2px -2px 4px black,
+    2px -2px 4px black,
+    -2px 2px 4px black,
+    2px 2px 4px black; /* 검은 그림자로 가독성 UP */
+  padding: 10px;
+}
+
+/* 텍스트를 왼쪽 상단에 고정 */
+.hobby-box::before,
+.hobby-bottom-left::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  pointer-events: none; /* 클릭 방해 안함 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.dark-mode {
+  background: #121212;
+  color: #f5f5f5;
+}
+
+body.dark-mode .box,
+body.dark-mode .job-box,
+body.dark-mode .project-box,
+body.dark-mode .skill,
+body.dark-mode .page,
+body.dark-mode textarea,
+body.dark-mode .hobby-box {
+  background-color: #1e1e1e !important;
+  color: #f5f5f5 !important;
+  border-color: #444 !important;
+}
+
+body.dark-mode .back-link {
+  color: #a3b3ff !important;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .star.filled,
+body.dark-mode .star.half::before {
+  color: #facc15;
+}
+
+
+
+
+
+
+
