@@ -4,6 +4,10 @@
 
 ---
 
+## 📁 디렉터리 구조
+
+https://cmin03.github.io/homepage/](https://cmin03.github.io/)
+---
 ## 📌 주요 구성
 
 ### 1. 홈 화면
@@ -54,10 +58,3 @@
 - HTML5  
 - CSS3 (Grid, Flex, Animation, Gradient, Box-shadow)  
 - JavaScript (다크모드 토글)
-
----
-
-## 📁 디렉터리 구조
-
-
-https://cmin03.github.io/homepage/
